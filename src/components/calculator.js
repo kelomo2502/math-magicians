@@ -2,7 +2,14 @@ import React, { useState } from 'react';
 
 import calculate from '../logic/calculate';
 
-// function here
+const Calculator = () => {
+  const display = document.getElementById('display');
+  const [result, setResult] = useState({ total: display, next: 0, operation: '' });
+
+  const clickFunction = (e) => {
+    setResult(calculate(result, e.target.innerHTML));
+  };
+
   return (
     <div className="App">
       <div className="container">
