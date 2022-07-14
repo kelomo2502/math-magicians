@@ -1,4 +1,5 @@
-// usestate here
+import React, { useState } from 'react';
+
 import calculate from '../logic/calculate';
 
 // function here
