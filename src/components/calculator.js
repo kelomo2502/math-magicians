@@ -30,7 +30,7 @@ const Calculator = () => {
         margin: '0 auto',
       }}
     >
-      <h1 style={{ color: '#0b2545', margin: '0', fontFamily: 'Poppins' }}>Lets do some Math</h1>
+      <h1 style={{ color: '#00c2cb', margin: '0', fontFamily: 'Poppins' }}>Lets do some Math</h1>
       <div className="container">
         <div className="result" data-testid="result-id">
           {objState.total || ''}
@@ -62,7 +62,7 @@ const Calculator = () => {
           primary
           btnClass="btn-percentage"
         />
-        <Button typeBtn="÷" btnOnClick={btnOnClick} btnClass="btn-divider" />
+        <Button typeBtn="/" btnOnClick={btnOnClick} btnClass="btn-divider" />
         <Button typeBtn="x" btnOnClick={btnOnClick} btnClass="btn-multiply" />
         <Button typeBtn="-" btnOnClick={btnOnClick} btnClass="btn-substract" />
         <Button typeBtn="+" btnOnClick={btnOnClick} btnClass="btn-plus" />

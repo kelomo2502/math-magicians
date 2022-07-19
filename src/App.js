@@ -12,7 +12,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/Calculator.js" element={<Calculator />} />
+          <Route path="/calculator" element={<Calculator />} />
           <Route path="/quote" element={<Quote />} />
         </Routes>
       </Router>
