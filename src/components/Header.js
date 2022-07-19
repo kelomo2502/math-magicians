@@ -11,15 +11,15 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.h1`
-  color: #553c9a;
+  color: #0b2545;
   font-family: 'Poppins', sans-serif;
 `;
 
 const Link = styled(ReachRouterLink)`
-  background-color: #e0e0e0;
+  background-color:#0B2545 ;
   margin: 1rem;
   height: fit-content;
-  color: #553c9a;
+  color: #fff;
   border: 0;
   font-size: 1.2em;
   border-radius: 3px;
@@ -30,7 +30,7 @@ const Link = styled(ReachRouterLink)`
   font-family: 'Poppins', sans-serif;
 
   &:hover {
-    background: #553c9a;
+    background: #8da9c4;
     color: #f4f4f4;
   }
 `;

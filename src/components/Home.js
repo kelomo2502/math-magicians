@@ -6,7 +6,7 @@ export default function Home() {
       width: '54rem', margin: '0 auto', fontFamily: 'Poppins', letterSpacing: '1px',
     }}
     >
-      <h1 style={{ color: '#00c2cb' }}>Welcome to our page</h1>
+      <h1 style={{ color: '#0b2545' }}>Welcome to our page</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim illum vel
         modi cupiditate, voluptatem vitae consequuntur, culpa quidem eligendi

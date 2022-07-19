@@ -5,7 +5,7 @@ export default function Quote() {
     <>
       <blockquote cite="https://www.prodigygame.com/main-en/blog/math-quotes/">
         <h2 style={{
-          width: '54rem', margin: '0 auto', color: '#00c2cb', fontFamily: 'Poppins',
+          width: '54rem', margin: '0 auto', color: '#13315c', fontFamily: 'Poppins',
         }}
         >
           Mathematics is not about numbers, Equations, computations, or algorithims:
