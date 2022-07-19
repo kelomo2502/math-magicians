@@ -1,51 +1,131 @@
-import React, { useState } from 'react';
-
+import React, { useState, useEffect } from 'react';
+import './Calculator.css';
 import calculate from '../logic/calculate';
+import Button from './Button';
 
 const Calculator = () => {
-  const display = document.getElementById('display');
-  const [result, setResult] = useState({ total: display, next: 0, operation: '' });
+  const [objState, setObjState] = useState({});
 
-  const clickFunction = (e) => {
-    setResult(calculate(result, e.target.innerHTML));
+  useEffect(() => {
+    setObjState({
+      total: '0',
+      next: null,
+      operation: null,
+    });
+  }, []);
+
+  const btnOnClick = (buttonName) => {
+    const { total, next, operation } = calculate(objState, buttonName);
+    setObjState({ total, next, operation });
   };
 
   return (
-    <div className="App">
+    <div
+      style={{
+        display: 'flex',
+        width: '56rem',
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        alignItems: 'flex-start',
+        margin: '0 auto',
+      }}
+    >
+      <h1 style={{ color: '#00c2cb', margin: '0', fontFamily: 'Poppins' }}>Lets do some Math</h1>
       <div className="container">
-        <div className="display" id="display">
-          {result.total}
-          {result.operation}
-          {result.next}
+        <div className="result" data-testid="result-id">
+          {objState.total || ''}
+          {objState.operation || ''}
+          {objState.next || ''}
         </div>
-        <div className=" row1">
-          <button onClick={clickFunction} type="button" value="AC">AC</button>
-          <button onClick={clickFunction} type="button" value="+">+/-</button>
-          <button onClick={clickFunction} type="button" value="%">%</button>
-          <button className="operator" onClick={clickFunction} type="button" value="÷">÷</button>
-        </div>
-        <div className="row2">
-          <button onClick={clickFunction} type="button" value="7">7</button>
-          <button onClick={clickFunction} type="button" value="8">8</button>
-          <button onClick={clickFunction} type="button" value="9">9</button>
-          <button onClick={clickFunction} className="operator" type="button" value="x">x</button>
-        </div>
-        <div className="row3">
-          <button onClick={clickFunction} type="button" value="4">4</button>
-          <button onClick={clickFunction} type="button" value="5">5</button>
-          <button onClick={clickFunction} type="button" value="6">6</button>
-          <button onClick={clickFunction} className="operator" type="button" value="-">-</button>
-        </div>
-        <div className="row4">
-          <button onClick={clickFunction} type="button" value="1">1</button>
-          <button onClick={clickFunction} type="button" value="2">2</button>
-          <button onClick={clickFunction} type="button" value="3">3</button>
-          <button onClick={clickFunction} className="operator" type="button" value="+">+</button>
-        </div>
-        <div className="row5">
-          <button onClick={clickFunction} type="button" className="zero" value="0">0</button>
-          <button onClick={clickFunction} type="button" className="operator" value="=">=</button>
-        </div>
+        <Button
+          typeBtn="0"
+          btnOnClick={btnOnClick}
+          primary
+          btnClass="btn-zero"
+        />
+        <Button typeBtn="=" btnOnClick={btnOnClick} btnClass="btn-equal" />
+        <Button
+          typeBtn="AC"
+          btnOnClick={btnOnClick}
+          primary
+          btnClass="btn-clear"
+        />
+        <Button
+          typeBtn="+/-"
+          btnOnClick={btnOnClick}
+          primary
+          btnClass="btn-toogle-sign"
+        />
+        <Button
+          typeBtn="%"
+          btnOnClick={btnOnClick}
+          primary
+          btnClass="btn-percentage"
+        />
+        <Button typeBtn="/" btnOnClick={btnOnClick} btnClass="btn-divider" />
+        <Button typeBtn="x" btnOnClick={btnOnClick} btnClass="btn-multiply" />
+        <Button typeBtn="-" btnOnClick={btnOnClick} btnClass="btn-substract" />
+        <Button typeBtn="+" btnOnClick={btnOnClick} btnClass="btn-plus" />
+        <Button
+          typeBtn="1"
+          btnOnClick={btnOnClick}
+          primary
+          btnClass="btn-one"
+        />
+        <Button
+          typeBtn="2"
+          btnOnClick={btnOnClick}
+          primary
+          btnClass="btn-two"
+        />
+        <Button
+          typeBtn="3"
+          btnOnClick={btnOnClick}
+          primary
+          btnClass="btn-three"
+        />
+        <Button
+          typeBtn="4"
+          btnOnClick={btnOnClick}
+          primary
+          btnClass="btn-four"
+        />
+        <Button
+          typeBtn="5"
+          btnOnClick={btnOnClick}
+          primary
+          btnClass="btn-five"
+        />
+        <Button
+          typeBtn="6"
+          btnOnClick={btnOnClick}
+          primary
+          btnClass="btn-six"
+        />
+        <Button
+          typeBtn="7"
+          btnOnClick={btnOnClick}
+          primary
+          btnClass="btn-seven"
+        />
+        <Button
+          typeBtn="8"
+          btnOnClick={btnOnClick}
+          primary
+          btnClass="btn-eight"
+        />
+        <Button
+          typeBtn="9"
+          btnOnClick={btnOnClick}
+          primary
+          btnClass="btn-nine"
+        />
+        <Button
+          typeBtn="."
+          btnOnClick={btnOnClick}
+          primary
+          btnClass="btn-dot"
+        />
       </div>
     </div>
   );
