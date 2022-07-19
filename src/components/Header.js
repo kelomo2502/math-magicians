@@ -11,7 +11,7 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.h1`
-  color: #553c9a;
+  color: #071e22;
   font-family: 'Poppins', sans-serif;
 `;
 
