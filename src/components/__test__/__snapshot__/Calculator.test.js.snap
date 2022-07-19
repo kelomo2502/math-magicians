@@ -1,18 +1,6 @@
-import React, { useState } from 'react';
-import './Calculator.css';
-import calculate from '../logic/Calculate';
+// Jest Snapshot v1, https://goo.gl/fbAQLP
 
-const Calculator = () => {
-  const [result, dispatch] = useState({
-    total: 0,
-    next: null,
-    operation: null,
-  });
-  const handleClick = (e) => {
-    dispatch(calculate(result, e.target.value));
-  };
-  return (
-    <div className="container">
+exports[`renders when there is item 1`] = `<div className="container">
       <div className="output">
         {result.total}
 
@@ -107,7 +95,4 @@ const Calculator = () => {
       >
         =
       </button>
-    </div>
-  );
-};
-export default Calculator;
+    </div>`;

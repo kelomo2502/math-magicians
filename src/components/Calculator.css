@@ -1,71 +1,39 @@
-.container {
-  font-size: 1.5em;
-  background: #d1d1d1;
-  width: 36rem;
-  height: 28rem;
-  padding: 0.125rem;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-  gap: 2px 2px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "result result result result"
-    "btn-clear btn-toogle-sign btn-percentage btn-divider"
-    "btn-seven btn-eight btn-nine btn-multiply"
-    "btn-four btn-five btn-six btn-substract"
-    "btn-one btn-two btn-three btn-plus"
-    "btn-zero btn-zero btn-dot btn-equal";
+* {
+  text-decoration: none;
+  list-style-type: none;
+  box-sizing: border-box;
 }
 
-.result {
-  background: #858694;
-  grid-area: result;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  color: white;
-  font-size: 2em;
-  padding: 0.3rem;
+.container {
+  margin: 100px auto 100px auto;
+  display: grid;
+  grid-template-columns: repeat(4, 10%);
+  grid-template-rows: minmax(80px, auto) repeat(5, 60px);
+  justify-content: center;
 }
 
 .btn-zero {
-  grid-area: btn-zero;
+  grid-column: span 2;
 }
 
-.btn-dot { grid-area: btn-dot; }
+.output {
+  grid-column: 1 / -1;
+  background-color: rgb(138, 138, 134);
+  color: #fff;
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 26px 5px 0 3px;
+}
 
-.btn-equal { grid-area: btn-equal; }
+.container > button {
+  cursor: pointer;
+  font-size: 24px;
+  border: 1px solid rgb(138, 138, 134);
+  outline: none;
+}
 
-.btn-clear { grid-area: btn-clear; }
-
-.btn-toogle-sign { grid-area: btn-toogle-sign; }
-
-.btn-percentage { grid-area: btn-percentage; }
-
-.btn-divider { grid-area: btn-divider; }
-
-.btn-multiply { grid-area: btn-multiply; }
-
-.btn-substract { grid-area: btn-substract; }
-
-.btn-plus { grid-area: btn-plus; }
-
-.btn-one { grid-area: btn-one; }
-
-.btn-two { grid-area: btn-two; }
-
-.btn-three { grid-area: btn-three; }
-
-.btn-four { grid-area: btn-four; }
-
-.btn-five { grid-area: btn-five; }
-
-.btn-six { grid-area: btn-six; }
-
-.btn-seven { grid-area: btn-seven; }
-
-.btn-eight { grid-area: btn-eight; }
-
-.btn-nine { grid-area: btn-nine; }
+.orange-color {
+  background-color: rgb(255, 166, 80);
+}
