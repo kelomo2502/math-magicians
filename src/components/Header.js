@@ -16,10 +16,10 @@ const Title = styled.h1`
 `;
 
 const Link = styled(ReachRouterLink)`
-  background-color: #e0e0e0;
+  background-color: #1d7874;
   margin: 1rem;
   height: fit-content;
-  color: #553c9a;
+  color: #f4c095;
   border: 0;
   font-size: 1.2em;
   border-radius: 3px;
@@ -30,7 +30,7 @@ const Link = styled(ReachRouterLink)`
   font-family: 'Poppins', sans-serif;
 
   &:hover {
-    background: #553c9a;
+    background: #679289;
     color: #f4f4f4;
   }
 `;

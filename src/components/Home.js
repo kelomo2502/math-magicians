@@ -8,22 +8,16 @@ export default function Home() {
     >
       <h1 style={{ color: '#071e22' }}>Welcome to our page</h1>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim illum vel
-        modi cupiditate, voluptatem vitae consequuntur, culpa quidem eligendi
-        pariatur nostrum minima labore ipsum. Error labore ex illo libero esse.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis animi
-        ut asperiores consequuntur? Molestiae obcaecati esse nostrum molestias
-        non officia dolorum magnam natus saepe recusandae blanditiis, doloremque
-        dolores! Veniam, a.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Blanditiis deserunt veniam sit maxime minus beatae itaque
+        exercitationem molestiae soluta. Alias amet saepe dignissimos
+        facere cupiditate earum excepturi ut doloremque officiis!
       </p>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim illum vel
-        modi cupiditate, voluptatem vitae consequuntur, culpa quidem eligendi
-        pariatur nostrum minima labore ipsum. Error labore ex illo libero esse.
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-        voluptates numquam impedit minus nobis repellat, culpa nam dolore, velit
-        praesentium eveniet accusamus laborum ab vel, dignissimos nesciunt
-        distinctio unde provident.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        At, accusantium! Perferendis, eveniet assumenda aspernatur
+        facilis vel voluptas asperiores! Magnam commodi blanditiis
+        odit et est accusamus veniam possimus totam doloremque ea!
       </p>
     </div>
   );

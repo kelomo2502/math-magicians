@@ -30,7 +30,7 @@ const Calculator = () => {
         margin: '0 auto',
       }}
     >
-      <h1 style={{ color: '#00c2cb', margin: '0', fontFamily: 'Poppins' }}>Lets do some Math</h1>
+      <h1 style={{ color: '#071e22', margin: '0', fontFamily: 'Poppins' }}>Lets do some Math</h1>
       <div className="container">
         <div className="result" data-testid="result-id">
           {objState.total || ''}
