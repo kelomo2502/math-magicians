@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// eslint-disable-next-line import/extensions
-import Calculator from './components/Calculator.js';
+import Calculator from './components/Calculator';
 import './App.css';
 import Header from './components/Header';
 import Home from './components/Home';
