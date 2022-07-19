@@ -1,113 +1,134 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Calculator.css';
-import calculate from '../logic/Calculate';
+import calculate from '../logic/calculate';
+import Button from './Button';
 
 const Calculator = () => {
-  const [result, dispatch] = useState({
-    total: 0,
-    next: null,
-    operation: null,
-  });
-  const handleClick = (e) => {
-    dispatch(calculate(result, e.target.value));
+  const [objState, setObjState] = useState({});
+
+  useEffect(() => {
+    setObjState({
+      total: '0',
+      next: null,
+      operation: null,
+    });
+  }, []);
+
+  const btnOnClick = (buttonName) => {
+    const { total, next, operation } = calculate(objState, buttonName);
+    setObjState({ total, next, operation });
   };
+
   return (
-    <div className="container">
-      <div className="output">
-        {result.total}
-
-        {result.operation}
-
-        {result.next}
+    <div
+      style={{
+        display: 'flex',
+        width: '56rem',
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        alignItems: 'flex-start',
+        margin: '0 auto',
+      }}
+    >
+      <h1 style={{ color: '#00c2cb', margin: '0', fontFamily: 'Poppins' }}>Lets do some Math</h1>
+      <div className="container">
+        <div className="result" data-testid="result-id">
+          {objState.total || ''}
+          {objState.operation || ''}
+          {objState.next || ''}
+        </div>
+        <Button
+          typeBtn="0"
+          btnOnClick={btnOnClick}
+          primary
+          btnClass="btn-zero"
+        />
+        <Button typeBtn="=" btnOnClick={btnOnClick} btnClass="btn-equal" />
+        <Button
+          typeBtn="AC"
+          btnOnClick={btnOnClick}
+          primary
+          btnClass="btn-clear"
+        />
+        <Button
+          typeBtn="+/-"
+          btnOnClick={btnOnClick}
+          primary
+          btnClass="btn-toogle-sign"
+        />
+        <Button
+          typeBtn="%"
+          btnOnClick={btnOnClick}
+          primary
+          btnClass="btn-percentage"
+        />
+        <Button typeBtn="/" btnOnClick={btnOnClick} btnClass="btn-divider" />
+        <Button typeBtn="x" btnOnClick={btnOnClick} btnClass="btn-multiply" />
+        <Button typeBtn="-" btnOnClick={btnOnClick} btnClass="btn-substract" />
+        <Button typeBtn="+" btnOnClick={btnOnClick} btnClass="btn-plus" />
+        <Button
+          typeBtn="1"
+          btnOnClick={btnOnClick}
+          primary
+          btnClass="btn-one"
+        />
+        <Button
+          typeBtn="2"
+          btnOnClick={btnOnClick}
+          primary
+          btnClass="btn-two"
+        />
+        <Button
+          typeBtn="3"
+          btnOnClick={btnOnClick}
+          primary
+          btnClass="btn-three"
+        />
+        <Button
+          typeBtn="4"
+          btnOnClick={btnOnClick}
+          primary
+          btnClass="btn-four"
+        />
+        <Button
+          typeBtn="5"
+          btnOnClick={btnOnClick}
+          primary
+          btnClass="btn-five"
+        />
+        <Button
+          typeBtn="6"
+          btnOnClick={btnOnClick}
+          primary
+          btnClass="btn-six"
+        />
+        <Button
+          typeBtn="7"
+          btnOnClick={btnOnClick}
+          primary
+          btnClass="btn-seven"
+        />
+        <Button
+          typeBtn="8"
+          btnOnClick={btnOnClick}
+          primary
+          btnClass="btn-eight"
+        />
+        <Button
+          typeBtn="9"
+          btnOnClick={btnOnClick}
+          primary
+          btnClass="btn-nine"
+        />
+        <Button
+          typeBtn="."
+          btnOnClick={btnOnClick}
+          primary
+          btnClass="btn-dot"
+        />
       </div>
-      <button type="button" value="AC" onClick={handleClick}>
-        AC
-      </button>
-      <button type="button" value="+/-" onClick={handleClick}>
-        +/-
-      </button>
-      <button type="button" value="%" onClick={handleClick}>
-        %
-      </button>
-      <button
-        type="button"
-        className="orange-color"
-        value="÷"
-        onClick={handleClick}
-      >
-        ÷
-      </button>
-      <button type="button" value="7" onClick={handleClick}>
-        7
-      </button>
-      <button type="button" value="8" onClick={handleClick}>
-        8
-      </button>
-      <button type="button" value="9" onClick={handleClick}>
-        9
-      </button>
-      <button
-        type="button"
-        className="orange-color"
-        value="x"
-        onClick={handleClick}
-      >
-        x
-      </button>
-      <button type="button" value="4" onClick={handleClick}>
-        4
-      </button>
-      <button type="button" value="5" onClick={handleClick}>
-        5
-      </button>
-      <button type="button" value="6" onClick={handleClick}>
-        6
-      </button>
-      <button
-        type="button"
-        className="orange-color"
-        value="-"
-        onClick={handleClick}
-      >
-        -
-      </button>
-      <button type="button" value="1" onClick={handleClick}>
-        1
-      </button>
-      <button type="button" value="2" onClick={handleClick}>
-        2
-      </button>
-      <button type="button" value="3" onClick={handleClick}>
-        3
-      </button>
-      <button
-        type="button"
-        className="orange-color"
-        value="+"
-        onClick={handleClick}
-      >
-        +
-      </button>
-      <button
-        type="button"
-        className="btn-zero"
-        value="0"
-        onClick={handleClick}
-      >
-        0
-      </button>
-      <button type="button" value="." onClick={handleClick}>
-        .
-      </button>
-      <button
-        type="button"
-        className="orange-color"
-        value="="
-        onClick={handleClick}
-      >
-        =
-      </button>
     </div>
   );
 };
+
 export default Calculator;
