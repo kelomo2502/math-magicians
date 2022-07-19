@@ -17,7 +17,7 @@ export default function calculate(obj, buttonName) {
   if (buttonName === 'AC') {
     return {
       total: null,
-      next: 0,
+      next: null,
       operation: null,
     };
   }

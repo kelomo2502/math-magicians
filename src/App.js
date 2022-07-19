@@ -1,14 +1,12 @@
 import React from 'react';
-import Calculator from './components/calculator';
+import Calculator from './components/Calculator';
+import './index.css';
 
-class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {};
-  }
-
+class App extends React.PureComponent {
   render() {
-    return <Calculator />;
+    return (
+      <Calculator />
+    );
   }
 }
 
