@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="sc-bczRLJ ckUIWC"
+>
+  <h1
+    className="sc-gsnTZi kVnhnt"
+  >
+    Math Magicians
+  </h1>
+  <nav>
+    <a
+      className="sc-dkzDqf jJGdJz"
+      href="/"
+      onClick={[Function]}
+    >
+      Home
+    </a>
+    <a
+      className="sc-dkzDqf jJGdJz"
+      href="/calculator"
+      onClick={[Function]}
+    >
+      Calculator
+    </a>
+    <a
+      className="sc-dkzDqf jJGdJz"
+      href="/quote"
+      onClick={[Function]}
+    >
+      Quote
+    </a>
+  </nav>
+</div>
+`;
