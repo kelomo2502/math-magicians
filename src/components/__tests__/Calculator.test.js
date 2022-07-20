@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import renderer from 'react-test-renderer';
-import Calculator from '../Calculator';
+import Calculator from '../calculator';
 import '@testing-library/jest-dom/extend-expect';
 
 describe('Test render Calculator component', () => {
