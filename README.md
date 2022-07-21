@@ -20,6 +20,8 @@ Additional description about the project and its features.
   - WebHint(linting tool)
   - Stylelint(style linting)
   ```
+## Live Demo Links
+(https://kelomo2502-math-magician.herokuapp.com/)
 
 
 ## Getting Started
